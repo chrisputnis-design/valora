@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #030A26;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Neon Orb */
+.orb {
+  position: fixed;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, #1B44FF 0%, #6C8DFF55 40%, transparent 70%);
+  filter: blur(140px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: breathe 9s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes breathe {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.85; }
+  100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+}
+
+/* Header */
+header {
+  padding: 30px;
+  z-index: 2;
+  position: relative;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Hero Text */
+main {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  padding-top: 40px;
+}
+
+h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* Waitlist */
+.waitlist {
+  margin-bottom: 60px;
+}
+
+.waitlist input {
+  padding: 14px 16px;
+  width: 260px;
+  border-radius: 8px;
+  border: none;
+  background: #0B1D5A;
+  color: white;
+  outline: none;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.waitlist button {
+  padding: 14px 24px;
+  background: #1B44FF;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.waitlist button:hover {
+  background: #5C8AFE;
+}
+
+/* Mockup Image */
+.mockup-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.mockup {
+  width: 350px;
+  max-width: 80vw;
+  margin-bottom: 80px;
+  filter: drop-shadow(0 0 40px rgba(27, 68, 255, 0.55));
+}
